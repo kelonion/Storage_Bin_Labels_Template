@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Printable Storage Bin Labels | Tavirela</title>
-  <meta name="description" content="Download free printable storage bin label templates from Tavirela. Standard 8.5x11 letter size, 4 labels per sheet, compatible with Word, inkjet and laser printers.">
+  <meta name="description" content="Download free printable storage bin label templates from Tavirela. Standard 8.5x11 letter size in landscape and portrait, 4 labels per sheet. Compatible with Word, inkjet and laser printers.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏷️%3C/text%3E%3C/svg%3E">
   <style>
     :root {
@@ -46,16 +46,13 @@
       align-items: center;
       gap: 12px;
     }
-    .header img {
-      height: 36px;
-      width: auto;
-    }
+    .header img { height: 36px; width: auto; }
 
     /* Hero */
     .hero {
       background: linear-gradient(135deg, #0984e3 0%, #6c5ce7 100%);
       color: white;
-      padding: 72px 24px;
+      padding: 56px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -79,20 +76,20 @@
       border-radius: 20px;
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       letter-spacing: 0.5px;
     }
     .hero h1 {
-      font-size: clamp(32px, 6vw, 52px);
+      font-size: clamp(28px, 5vw, 44px);
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .hero p {
-      font-size: clamp(16px, 2.5vw, 20px);
+      font-size: clamp(15px, 2vw, 18px);
       opacity: 0.92;
       max-width: 600px;
-      margin: 0 auto 32px;
+      margin: 0 auto 0;
     }
 
     /* Buttons */
@@ -100,10 +97,10 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 16px 32px;
+      gap: 8px;
+      padding: 14px 28px;
       border-radius: 10px;
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 700;
       text-decoration: none;
       transition: transform 0.15s, box-shadow 0.15s;
@@ -114,20 +111,21 @@
     .btn-primary {
       background: var(--accent);
       color: white;
-      box-shadow: 0 8px 24px rgba(0,184,148,0.35);
+      box-shadow: 0 6px 18px rgba(0,184,148,0.3);
     }
-    .btn-primary:hover { box-shadow: 0 12px 28px rgba(0,184,148,0.45); }
-    .btn-secondary {
-      background: rgba(255,255,255,0.15);
-      color: white;
-      border: 2px solid rgba(255,255,255,0.4);
+    .btn-primary:hover { box-shadow: 0 10px 24px rgba(0,184,148,0.4); }
+    .btn-outline {
+      background: white;
+      color: var(--brand);
+      border: 2px solid var(--brand);
     }
+    .btn-outline:hover { background: #f0f7ff; }
 
     /* Main content */
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 40px 24px;
     }
 
     /* Cards */
@@ -157,66 +155,116 @@
     .card ul { padding-left: 22px; }
     .card li { margin-bottom: 8px; }
 
-    /* Preview visual */
-    .preview-wrap {
+    /* Download card */
+    .download-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+      border: 2px solid var(--brand);
+      text-align: center;
+    }
+
+    /* Template selector - two columns */
+    .template-grid {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      gap: 24px;
       margin: 28px 0;
     }
+    .template-option {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .template-option:hover {
+      border-color: var(--brand);
+      box-shadow: 0 4px 16px rgba(9,132,227,0.12);
+    }
+    .template-label {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .template-label .tag {
+      font-size: 11px;
+      font-weight: 600;
+      background: #e8f4fd;
+      color: var(--brand);
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    /* Preview papers - two sizes */
     .paper {
       background: white;
       border: 1px solid #d0d0d0;
-      border-radius: 4px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-      width: min(380px, 92vw);
-      aspect-ratio: 11 / 8.5;
+      border-radius: 3px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       position: relative;
       overflow: hidden;
     }
+    .paper.landscape { width: 360px; aspect-ratio: 11 / 8.5; }
+    .paper.portrait  { width: 280px; aspect-ratio: 8.5 / 11; }
     .cut-line {
       position: absolute;
       background: transparent;
       border: 0 none;
     }
     .cut-line.horizontal {
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 0;
-      border-top: 2px dashed #b2bec3;
+      top: 50%; left: 0; right: 0; height: 0;
+      border-top: 1.5px dashed #b2bec3;
       transform: translateY(-50%);
     }
     .cut-line.vertical {
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 0;
-      border-left: 2px dashed #b2bec3;
+      left: 50%; top: 0; bottom: 0; width: 0;
+      border-left: 1.5px dashed #b2bec3;
       transform: translateX(-50%);
     }
     .label-text {
       position: absolute;
-      width: 50%;
-      height: 50%;
+      width: 50%; height: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: var(--text-light);
-      padding: 12px;
+      padding: 6px;
     }
     .label-text:nth-child(3) { top: 0; left: 0; }
     .label-text:nth-child(4) { top: 0; right: 0; }
     .label-text:nth-child(5) { bottom: 0; left: 0; }
     .label-text:nth-child(6) { bottom: 0; right: 0; }
     .label-text strong {
-      font-size: 15px;
-      margin-bottom: 4px;
+      font-size: 12px;
+      margin-bottom: 2px;
     }
     .label-text span {
+      font-size: 10px;
+      color: #b2bec3;
+    }
+    .paper-dims {
+      font-size: 13px;
+      color: var(--text-light);
+      text-align: center;
+      line-height: 1.6;
+    }
+    .paper-dims span {
+      display: block;
       font-size: 12px;
       color: #b2bec3;
+    }
+
+    /* OR divider */
+    .or-divider {
+      display: none;
     }
 
     /* Features grid */
@@ -232,10 +280,7 @@
       padding: 20px;
       border: 1px solid var(--border);
     }
-    .feature-icon {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
+    .feature-icon { font-size: 28px; margin-bottom: 10px; }
     .feature h4 {
       font-size: 15px;
       font-weight: 700;
@@ -272,30 +317,7 @@
       font-weight: 700;
       font-size: 15px;
     }
-    .step h4 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    /* Download section */
-    .download-card {
-      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
-      border: 2px solid var(--brand);
-      text-align: center;
-    }
-    .file-info {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #e8f4fd;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 13px;
-      color: var(--brand);
-      font-weight: 600;
-      margin: 16px 0 24px;
-    }
+    .step h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
 
     /* Footer */
     .footer {
@@ -308,13 +330,13 @@
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
-      .hero { padding: 52px 20px; }
+    @media (max-width: 680px) {
+      .hero { padding: 44px 20px; }
       .card { padding: 24px; }
-      .btn { width: 100%; }
-      .paper { width: 92vw; }
+      .template-grid { max-width: 100%; }
+      .paper.landscape { width: min(360px, 88vw); }
+      .paper.portrait { width: min(280px, 70vw); }
       .features { grid-template-columns: 1fr; }
-      .label-text { padding: 6px; }
       .label-text strong { font-size: 13px; }
       .label-text span { font-size: 10px; white-space: nowrap; }
     }
@@ -333,16 +355,8 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge">FREE DOWNLOAD</div>
-      <h1>Print Professional Storage Bin Labels in Seconds</h1>
-      <p>Free printable label templates designed for Tavirela Storage Bin Labels. Standard 8.5×11 letter size in landscape, 4 labels per sheet. Works with any inkjet or laser printer.</p>
-      <a href="Storage_Bin_Labels_Template.docx" class="btn btn-primary" download>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-        Download Template (.docx)
-      </a>
+      <h1>Print Professional Storage Bin Labels</h1>
+      <p>Two formats — landscape and portrait. Standard 8.5 × 11 letter sheets, 4 labels each. Works with any printer. Choose the layout that fits your bins best.</p>
     </div>
   </section>
 
@@ -351,46 +365,65 @@
 
     <!-- Download card -->
     <div class="card download-card">
-      <h2>📥 What You're Downloading</h2>
-      <p>A ready-to-print Microsoft Word template with a 2×2 grid of 5.5" × 4.25" label areas on a standard 8.5" × 11" US Letter page (landscape orientation).</p>
+      <h2>📥 Choose Your Template</h2>
+      <p style="max-width: 600px; margin: 0 auto 4px;">Two layouts for the same sheet — pick whichever fits your storage bins.</p>
 
-      <div class="preview-wrap">
-        <div class="paper">
-          <div class="cut-line horizontal"></div>
-          <div class="cut-line vertical"></div>
-          <div class="label-text">
-            <strong>Label 1</strong>
-            <span>5.5" × 4.25"</span>
+      <div class="template-grid">
+        <!-- Landscape -->
+        <div class="template-option">
+          <div class="template-label">
+            🖼️ Landscape
+            <span class="tag">Popular</span>
           </div>
-          <div class="label-text">
-            <strong>Label 2</strong>
-            <span>5.5" × 4.25"</span>
+          <div class="paper landscape">
+            <div class="cut-line horizontal"></div>
+            <div class="cut-line vertical"></div>
+            <div class="label-text"><strong>Label 1</strong><span>5.5×4.25"</span></div>
+            <div class="label-text"><strong>Label 2</strong><span>5.5×4.25"</span></div>
+            <div class="label-text"><strong>Label 3</strong><span>5.5×4.25"</span></div>
+            <div class="label-text"><strong>Label 4</strong><span>5.5×4.25"</span></div>
           </div>
-          <div class="label-text">
-            <strong>Label 3</strong>
-            <span>5.5" × 4.25"</span>
+          <div class="paper-dims">
+            Page: 11 × 8.5 in<br>
+            <span>Labels: 5.5 × 4.25 in each</span>
           </div>
-          <div class="label-text">
-            <strong>Label 4</strong>
-            <span>5.5" × 4.25"</span>
+          <a href="Storage_Bin_Labels_Landscape.docx" class="btn btn-primary" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download Landscape
+          </a>
+        </div>
+
+        <!-- Portrait -->
+        <div class="template-option">
+          <div class="template-label">
+            📄 Portrait
           </div>
+          <div class="paper portrait">
+            <div class="cut-line horizontal"></div>
+            <div class="cut-line vertical"></div>
+            <div class="label-text"><strong>Label 1</strong><span>4.25×5.5"</span></div>
+            <div class="label-text"><strong>Label 2</strong><span>4.25×5.5"</span></div>
+            <div class="label-text"><strong>Label 3</strong><span>4.25×5.5"</span></div>
+            <div class="label-text"><strong>Label 4</strong><span>4.25×5.5"</span></div>
+          </div>
+          <div class="paper-dims">
+            Page: 8.5 × 11 in<br>
+            <span>Labels: 4.25 × 5.5 in each</span>
+          </div>
+          <a href="Storage_Bin_Labels_Portrait.docx" class="btn btn-primary" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download Portrait
+          </a>
         </div>
       </div>
-
-      <div class="file-info">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="16" y1="13" x2="8" y2="13"/>
-          <line x1="16" y1="17" x2="8" y2="17"/>
-          <polyline points="10 9 9 9 8 9"/>
-        </svg>
-        Storage_Bin_Labels_Template.docx · Microsoft Word · 4 labels per sheet
-      </div>
-
-      <a href="Storage_Bin_Labels_Template.docx" class="btn btn-primary" download>
-        Download Now
-      </a>
     </div>
 
     <!-- How to use -->
@@ -401,7 +434,7 @@
           <div class="step-num">1</div>
           <div>
             <h4>Download the Template</h4>
-            <p>Click the button above to save the .docx file to your computer.</p>
+            <p>Choose Landscape or Portrait above, then save the .docx file to your computer.</p>
           </div>
         </div>
         <div class="step">
@@ -415,14 +448,14 @@
           <div class="step-num">3</div>
           <div>
             <h4>Print on Tavirela Label Sheets</h4>
-            <p>Load your Tavirela Storage Bin Label sheets into your printer. In print settings, select <strong>US Letter (8.5" × 11") Landscape</strong>, <strong>Plain Paper</strong>, and <strong>Actual Size / 100% Scale</strong>.</p>
+            <p>Load your Tavirela Storage Bin Label sheets into your printer. In print settings, select <strong>US Letter (8.5" × 11")</strong>, set orientation to match your template (<strong>Landscape</strong> or <strong>Portrait</strong>), choose <strong>Plain Paper</strong>, and <strong>Actual Size / 100% Scale</strong>.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div>
             <h4>Peel and Stick</h4>
-            <p>Cut or peel along the pre-cut lines and apply to your storage bins, boxes, or containers.</p>
+            <p>Peel along the pre-cut lines and apply to your storage bins, boxes, or containers.</p>
           </div>
         </div>
       </div>
@@ -433,19 +466,19 @@
       <h2>✨ Template Features</h2>
       <div class="features">
         <div class="feature">
+          <div class="feature-icon">🔄</div>
+          <h4>Two Layouts</h4>
+          <p>Landscape (5.5 × 4.25" labels) fits wide bins. Portrait (4.25 × 5.5" labels) fits tall bins. You choose.</p>
+        </div>
+        <div class="feature">
           <div class="feature-icon">🖨️</div>
           <h4>Any Printer</h4>
-          <p>Works with inkjet, laser, and all-in-one printers. No special paper tray required.</p>
+          <p>Works with inkjet, laser, and all-in-one printers. Standard 8.5×11 letter size — no special tray needed.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">✍️</div>
           <h4>Editable Text</h4>
           <p>Customize fonts, sizes, colors, and add icons or logos inside each label cell.</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">📐</div>
-          <h4>Perfect Fit</h4>
-          <p>Pre-sized at 5.5" × 4.25" per label — exactly matches Tavirela label sheets.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🆓</div>
@@ -459,11 +492,12 @@
     <div class="card">
       <h2>💡 Pro Printing Tips</h2>
       <ul>
-        <li><strong>Always do a test print</strong> on plain paper first. Hold it over a label sheet to check alignment. Remember to set <strong>landscape orientation</strong>.</li>
+        <li><strong>Test print first</strong> on plain paper. Hold it over a label sheet to check alignment and orientation.</li>
+        <li><strong>Match orientation:</strong> set your printer to <strong>Landscape</strong> for the landscape template, <strong>Portrait</strong> for the portrait one.</li>
         <li><strong>Set scaling to "Actual Size" or "100%"</strong> — do NOT use "Fit to Page" or the labels will be misaligned.</li>
         <li><strong>Load sheets one at a time</strong> if your printer tends to grab multiple sheets.</li>
-        <li><strong>Use standard paper type</strong> in your printer settings (not label, not cardstock) for best feeding.</li>
-        <li><strong>For laser printers:</strong> let the ink/toner dry for a few seconds before handling.</li>
+        <li><strong>Use "Plain Paper"</strong> in your printer settings (not label or cardstock) for best feeding.</li>
+        <li><strong>For laser printers:</strong> let the toner dry for a few seconds before handling.</li>
       </ul>
     </div>
 
